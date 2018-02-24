@@ -41,6 +41,7 @@
 - [table NPM Package](https://www.npmjs.com/package/table)
 - [colors NPM Package](https://www.npmjs.com/package/colors)
 
-
+### Demo Video
+- [Bamazon Demo YouTube Video](https://youtu.be/htFmr-pag2M)
 
 
