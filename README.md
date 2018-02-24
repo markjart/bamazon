@@ -1,5 +1,5 @@
 # Bamazon 
-### a Command Line Storefront Powered by Node.js and MySQL
+### A Command Line Storefront Powered by Node.js and MySQL
 
 ## Getting Started
 
@@ -20,3 +20,17 @@
      * If there is not enough stock, it will tell the user that there isn't enough of the product and ask them if they would like to purchase another item.
      * If the purchase goes through, it updates the stock quantity to reflect the purchase.
 
+## Running node bamazonManager.js
+
+- Starts the **Managers Dashboard** with the following options displayed in a list:
+     * View Products for Sale
+          * Lists all of the products in a formatted table with header.
+     * View Low Inventory
+          * Lists all products with a quantity of 5 or lower.
+     * Add to Inventory
+          * prompts the manager through selecting the product to update and the quantity for the update.
+     * Add New Product
+          * Prompts the manager through adding a new product to Bamazon.
+     * End Session
+          * Exits dashboard and returns manager to command prompt.
+     
