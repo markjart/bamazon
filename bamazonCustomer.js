@@ -49,7 +49,7 @@ function reprompt(){
 		name: "reply",
 		message: "Would you like to purchase another item?",
 		choices: ["Yes", "No"]
-  }]).then(function(answers){
+	}]).then(function(answers){
 		switch(answers.reply){
 			case "Yes": 
 				clearScreen();
@@ -64,7 +64,7 @@ function reprompt(){
 				break;
 			default:
 				clearScreen();
-				console.log("Something went horribly wrong. SAVE YOURSELF!! Goodbye!");
+				console.log("Something went horribly wrong. SAVE YOURSELF!! Goodbye!".bgRed.white);
 				connection.end();
 				process.exit();
 		};
@@ -80,7 +80,7 @@ function start(){
 		clearScreen();
 		for(var i = 0; i < results.length; i++){
 			var tempArray = [];
-			tempArray.push(results[i].itemId).yellow;
+			tempArray.push(results[i].itemId);
 			tempArray.push(results[i].productName);
 			tempArray.push(results[i].departmentName);
 			tempArray.push(results[i].price);
@@ -154,7 +154,7 @@ var bamazonia = (
 	"| $$  \\ $$| $$  \\ $$| $$$$  /$$$$| $$  \\ $$     /$$/ | $$  \\ $$| $$$$| $$\n".white +
 	"| $$$$$$$ | $$$$$$$$| $$ $$/$$ $$| $$$$$$$$    /$$/  | $$  | $$| $$ $$ $$\n".white +
 	"| $$__  $$| $$__  $$| $$  $$$| $$| $$__  $$   /$$/   | $$  | $$| $$  $$$$\n".white +
-	"| $$  \\ $$| $$  | $$| $$\\  $ | $$| $$  | $$  /$$/    | $$  | $$| $$\\  $$$\n".blue +
+	"| $$  \\ $$| $$  | $$| $$\\  $ | $$| $$  | $$  /$$/    | $$  | $$| $$\\  $$$\n".white +
 	"| $$$$$$$/| $$  | $$| $$ \\/  | $$| $$  | $$ /$$$$$$$$|  $$$$$$/| $$ \\  $$\n".blue +
 	"|_______/ |__/  |__/|__/     |__/|__/  |__/|________/ \\______/ |__/  \\__/\n".blue);
 
@@ -162,7 +162,7 @@ var bamazonia = (
 //TO START, I clear the screen, console log the intro text and bamazonia banner	for 3.5 seconds and then start the app.
 clearScreen();
 //intro text welcoming customer
-console.log("\n          Welcome Valued Customer!  Enjoy Your Time Shopping At          \n".italic.cyan);
+console.log("\n          Welcome Valued Customer!  Enjoy Your Time Shopping At          \n".cyan);
 console.log(bamazonia);
 setTimeout(function(){	
 	start();
